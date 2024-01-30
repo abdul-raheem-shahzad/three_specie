@@ -25,8 +25,8 @@ st.sidebar.title('Select the species')
 
 #select the species
 
-species = st.sidebar.selectbox('Select the species', ('Halodule Uninervis Current Distrbution','Halodule Pinifolia Current Distribution','Halodule Pinifolia in Year 2050',
-'Halodule Pinifolia in Year 2100','Thalassia Hemprichii Current Distribution','Thalassia hemprichii in Year 2050','Thalassia hemprichii in Year 2100'))
+species = st.sidebar.selectbox('Select the species', ('Halodule Uninervis Current Distrbution','Halodule Uninervis Temporal Distrbution (2050)','Halodule Uninervis Temporal Distrbution (2100)','Halodule Pinifolia Current Distribution','Halodule Pinifolia Temporal Distrbution (2050)',
+'Halodule Pinifolia in Year 2100','Thalassia Hemprichii Current Distribution','Thalassia hemprichii Temporal Distrbution (2050)','Thalassia hemprichii Temporal Distrbution (2100)'))
 
 
 #Halodule Uninervis
@@ -43,12 +43,12 @@ if species == 'Halodule Uninervis Current Distrbution':
 
 
     # Load the pickled model
-    model_path = 'xgb_halodule_uninrvis_current_distribution.pkl'
+    model_path = 'best_model_Halodule_Unnivers_current_14_jan_2024.pkl'
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
 
     # Define the Streamlit app
-    def halodule_current():
+    def halodule_Uninervis_current():
         st.title('Latitude and Longitude Prediction')
         st.write('Enter the input variables to predict latitude and longitude:')
 
@@ -84,7 +84,120 @@ if species == 'Halodule Uninervis Current Distrbution':
             folium_static(m)
 
 # Run the app
-    halodule_current()
+    halodule_Uninervis_current()
+#Halodule Uninervis
+if species == 'Halodule Uninervis Temporal Distrbution (2050)':
+
+    #heading
+    #write tile with mid align
+
+    st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+
+
+    #Pciture
+    st.image('one_specie.jpeg', caption='Halodule Uninervis', use_column_width=True)
+
+
+    # Load the pickled model
+    model_path = 'best_model_Halodule_Unnivers_2050_14_jan_2024.pkl'
+    with open(model_path, 'rb') as file:
+        model = pickle.load(file)
+
+    # Define the Streamlit app
+    def halodule_Uninervis_2050():
+        st.title('Latitude and Longitude Prediction')
+        st.write('Enter the input variables to predict latitude and longitude:')
+
+        # Input variables
+        present_surface_temperature_max_asc = st.number_input('Present Surface Temperature Max_asc', min_value=0.0)
+        present_surface_salinity_mean_asc = st.number_input('Present Surface Salinity Mean_asc', min_value=0.0)
+        present_surface_salinity_max_asc = st.number_input('Present Surface Salinity Max_asc', min_value=0.0)
+
+        # Predict button
+        if st.button('Predict'):
+            # Prepare the input data
+            input_data = np.array([[
+                present_surface_temperature_max_asc,
+                present_surface_salinity_mean_asc,
+                present_surface_salinity_max_asc
+            ]])
+
+            # Make the prediction
+            prediction = model.predict(input_data)
+
+            # Display the predicted latitude and longitude
+            st.write('Predicted Latitude: ', prediction[0][0])
+            st.write('Predicted Longitude: ', prediction[0][1])
+            # Create a map centered at the predicted latitude and longitude
+            map_center = [prediction[0][0], prediction[0][1]]
+            import folium
+            m = folium.Map(location=map_center, zoom_start=12)
+
+            # Add a marker at the predicted latitude and longitude
+            folium.Marker(location=map_center).add_to(m)
+
+            # Display the map
+            folium_static(m)
+
+# Run the app
+    halodule_Uninervis_2050()
+
+#Halodule Uninervis
+if species == 'Halodule Uninervis Temporal Distrbution (2100)':
+
+    #heading
+    #write tile with mid align
+
+    st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+
+
+    #Pciture
+    st.image('one_specie.jpeg', caption='Halodule Uninervis', use_column_width=True)
+
+
+    # Load the pickled model
+    model_path = 'best_model_Halodule_Unnivers_2050_14_jan_2024.pkl'
+    with open(model_path, 'rb') as file:
+        model = pickle.load(file)
+
+    # Define the Streamlit app
+    def halodule_Uninervis_2100():
+        st.title('Latitude and Longitude Prediction')
+        st.write('Enter the input variables to predict latitude and longitude:')
+
+        # Input variables
+        present_surface_temperature_max_asc = st.number_input('Present Surface Temperature Max_asc', min_value=0.0)
+        present_surface_salinity_mean_asc = st.number_input('Present Surface Salinity Mean_asc', min_value=0.0)
+        present_surface_salinity_max_asc = st.number_input('Present Surface Salinity Max_asc', min_value=0.0)
+
+        # Predict button
+        if st.button('Predict'):
+            # Prepare the input data
+            input_data = np.array([[
+                present_surface_temperature_max_asc,
+                present_surface_salinity_mean_asc,
+                present_surface_salinity_max_asc
+            ]])
+
+            # Make the prediction
+            prediction = model.predict(input_data)
+
+            # Display the predicted latitude and longitude
+            st.write('Predicted Latitude: ', prediction[0][0])
+            st.write('Predicted Longitude: ', prediction[0][1])
+            # Create a map centered at the predicted latitude and longitude
+            map_center = [prediction[0][0], prediction[0][1]]
+            import folium
+            m = folium.Map(location=map_center, zoom_start=12)
+
+            # Add a marker at the predicted latitude and longitude
+            folium.Marker(location=map_center).add_to(m)
+
+            # Display the map
+            folium_static(m)
+
+# Run the app
+    halodule_Uninervis_2100()
 
 
 
