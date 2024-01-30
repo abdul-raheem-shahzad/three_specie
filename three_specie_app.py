@@ -53,18 +53,22 @@ if species == 'Halodule Uninervis Current Distrbution':
         st.write('Enter the input variables to predict latitude and longitude:')
 
         # Input variables
-        present_surface_temperature_max_asc = st.number_input('Present Surface Temperature Max_asc', min_value=0.0)
-        present_surface_salinity_mean_asc = st.number_input('Present Surface Salinity Mean_asc', min_value=0.0)
-        present_surface_salinity_max_asc = st.number_input('Present Surface Salinity Max_asc', min_value=0.0)
+        present_surface_temperature_min = st.number_input('Present Surface Temperature Min', min_value=0.0)
+        present_surface_temperature_mean = st.number_input('Present Surface Temperature Mean', min_value=0.0)
+        present_surface_temperature_max = st.number_input('Present Surface Temperature Max', min_value=0.0)
+        present_surface_salinity_mean = st.number_input('Present Surface Salinity Mean', min_value=0.0)
+
 
         # Predict button
         if st.button('Predict'):
             # Prepare the input data
             input_data = np.array([[
-                present_surface_temperature_max_asc,
-                present_surface_salinity_mean_asc,
-                present_surface_salinity_max_asc
-            ]])
+                present_surface_temperature_max,
+                present_surface_temperature_mean,
+                present_surface_temperature_max,
+                present_surface_salinity_mean
+]])
+
 
             # Make the prediction
             prediction = model.predict(input_data)
@@ -86,7 +90,7 @@ if species == 'Halodule Uninervis Current Distrbution':
 # Run the app
     halodule_Uninervis_current()
 #Halodule Uninervis
-if species == 'Halodule Uninervis Temporal Distrbution (2050)':
+elif species == 'Halodule Uninervis Temporal Distrbution (2050)':
 
     #heading
     #write tile with mid align
@@ -108,19 +112,33 @@ if species == 'Halodule Uninervis Temporal Distrbution (2050)':
         st.title('Latitude and Longitude Prediction')
         st.write('Enter the input variables to predict latitude and longitude:')
 
-        # Input variables
-        present_surface_temperature_max_asc = st.number_input('Present Surface Temperature Max_asc', min_value=0.0)
-        present_surface_salinity_mean_asc = st.number_input('Present Surface Salinity Mean_asc', min_value=0.0)
-        present_surface_salinity_max_asc = st.number_input('Present Surface Salinity Max_asc', min_value=0.0)
+        # For RCP26 in 2050
+        rcp26_surface_salinity_mean_2050 = st.number_input('2050AOGCM.RCP26.Surface.Salinity.Mean', min_value=0.0)
+        rcp26_surface_temperature_max_2050 = st.number_input('2050AOGCM.RCP26.Surface.Temperature.Max', min_value=0.0)
+        rcp26_surface_temperature_mean_2050 = st.number_input('2050AOGCM.RCP26.Surface.Temperature.Mean', min_value=0.0)
+        rcp26_surface_temperature_min_2050 = st.number_input('2050AOGCM.RCP26.Surface.Temperature.Min', min_value=0.0)
+
+# For RCP85 in 2050
+        rcp85_surface_salinity_mean_2050 = st.number_input('2050AOGCM.RCP85.Surface.Salinity.Mean', min_value=0.0)
+        rcp85_surface_temperature_max_2050 = st.number_input('2050AOGCM.RCP85.Surface.Temperature.Max', min_value=0.0)
+        rcp85_surface_temperature_mean_2050 = st.number_input('2050AOGCM.RCP85.Surface.Temperature.Mean', min_value=0.0)
+        rcp85_surface_temperature_min_2050 = st.number_input('2050AOGCM.RCP85.Surface.Temperature.Min', min_value=0.0)
+
 
         # Predict button
         if st.button('Predict'):
             # Prepare the input data
             input_data = np.array([[
-                present_surface_temperature_max_asc,
-                present_surface_salinity_mean_asc,
-                present_surface_salinity_max_asc
-            ]])
+                rcp26_surface_salinity_mean_2050,
+                rcp26_surface_temperature_max_2050,
+                rcp26_surface_temperature_mean_2050,
+                rcp26_surface_temperature_min_2050,
+                rcp85_surface_salinity_mean_2050,
+                rcp85_surface_temperature_max_2050,
+                rcp85_surface_temperature_mean_2050,
+                rcp85_surface_temperature_min_2050
+]])
+
 
             # Make the prediction
             prediction = model.predict(input_data)
@@ -143,7 +161,7 @@ if species == 'Halodule Uninervis Temporal Distrbution (2050)':
     halodule_Uninervis_2050()
 
 #Halodule Uninervis
-if species == 'Halodule Uninervis Temporal Distrbution (2100)':
+elif species == 'Halodule Uninervis Temporal Distrbution (2100)':
 
     #heading
     #write tile with mid align
@@ -165,19 +183,34 @@ if species == 'Halodule Uninervis Temporal Distrbution (2100)':
         st.title('Latitude and Longitude Prediction')
         st.write('Enter the input variables to predict latitude and longitude:')
 
-        # Input variables
-        present_surface_temperature_max_asc = st.number_input('Present Surface Temperature Max_asc', min_value=0.0)
-        present_surface_salinity_mean_asc = st.number_input('Present Surface Salinity Mean_asc', min_value=0.0)
-        present_surface_salinity_max_asc = st.number_input('Present Surface Salinity Max_asc', min_value=0.0)
+# For RCP26 in 2100
+        rcp26_surface_salinity_mean_2100 = st.number_input('2100AOGCM.RCP26.Surface.Salinity.Mean', min_value=0.0)
+        rcp26_surface_temperature_max_2100 = st.number_input('2100AOGCM.RCP26.Surface.Temperature.Max', min_value=0.0)
+        rcp26_surface_temperature_mean_2100 = st.number_input('2100AOGCM.RCP26.Surface.Temperature.Mean', min_value=0.0)
+        rcp26_surface_temperature_min_2100 = st.number_input('2100AOGCM.RCP26.Surface.Temperature.Min', min_value=0.0)
+
+        # For RCP85 in 2100
+        rcp85_surface_salinity_mean_2100 = st.number_input('2100AOGCM.RCP85.Surface.Salinity.Mean', min_value=0.0)
+        rcp85_surface_temperature_max_2100 = st.number_input('2100AOGCM.RCP85.Surface.Temperature.Max', min_value=0.0)
+        rcp85_surface_temperature_mean_2100 = st.number_input('2100AOGCM.RCP85.Surface.Temperature.Mean', min_value=0.0)
+        rcp85_surface_temperature_min_2100 = st.number_input('2100AOGCM.RCP85.Surface.Temperature.Min', min_value=0.0)
+
 
         # Predict button
         if st.button('Predict'):
             # Prepare the input data
             input_data = np.array([[
-                present_surface_temperature_max_asc,
-                present_surface_salinity_mean_asc,
-                present_surface_salinity_max_asc
-            ]])
+
+                    rcp26_surface_salinity_mean_2100,
+                    rcp26_surface_temperature_max_2100,
+                    rcp26_surface_temperature_mean_2100,
+                    rcp26_surface_temperature_min_2100,
+                    rcp85_surface_salinity_mean_2100,
+                    rcp85_surface_temperature_max_2100,
+                    rcp85_surface_temperature_mean_2100,
+                    rcp85_surface_temperature_min_2100
+]])
+
 
             # Make the prediction
             prediction = model.predict(input_data)
