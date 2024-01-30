@@ -26,7 +26,7 @@ st.sidebar.title('Select the species')
 #select the species
 
 species = st.sidebar.selectbox('Select the species', ('Halodule Uninervis Current Distrbution','Halodule Uninervis Temporal Distrbution (2050)','Halodule Uninervis Temporal Distrbution (2100)','Halodule Pinifolia Current Distribution','Halodule Pinifolia Temporal Distrbution (2050)',
-'Halodule Pinifolia Temporal Distrbution (2100)','Halodule Uninervis Temporal Distrbution (2100)','Thalassia Hemprichii Current Distribution','Thalassia hemprichii Temporal Distrbution (2050)','Thalassia hemprichii Temporal Distrbution (2100)'))
+'Halodule Pinifolia Temporal Distrbution (2100)','Halodule Pinifolia Temporal Distrbution (2100)','Thalassia Hemprichii Current Distribution','Thalassia hemprichii Temporal Distrbution (2050)','Thalassia hemprichii Temporal Distrbution (2100)'))
 
 
 #Halodule Uninervis
