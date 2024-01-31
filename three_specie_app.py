@@ -26,7 +26,7 @@ st.sidebar.title('Select the species')
 #select the species
 
 species = st.sidebar.selectbox('Select the species', ('Halodule Uninervis Current Distrbution','Halodule Uninervis Temporal Distrbution (2050)','Halodule Uninervis Temporal Distrbution (2100)','Halodule Pinifolia Current Distribution','Halodule Pinifolia Temporal Distrbution (2050)',
-'Halodule Pinifolia Temporal Distrbution (2100)','Halodule Pinifolia Temporal Distrbution (2100)','Thalassia Hemprichii Current Distribution','Thalassia hemprichii Temporal Distrbution (2050)','Thalassia hemprichii Temporal Distrbution (2100)'))
+'Halodule Pinifolia Temporal Distrbution (2100)','Thalassia Hemprichii Current Distribution','Thalassia Hemprichii Temporal Distrbution (2050)','Thalassia Hemprichii Temporal Distrbution (2100)'))
 
 
 #Halodule Uninervis
@@ -305,7 +305,7 @@ elif species == 'Halodule Pinifolia Current Distribution':
         # Call the app function
 
 
-elif species == 'Halodule Pinifolia in Year 2050':
+elif species == 'Halodule Pinifolia Temporal Distrbution (2050)':
 
     
         # Load the pickled model
@@ -376,7 +376,7 @@ elif species == 'Halodule Pinifolia in Year 2050':
 
         halodule_pinfole_2050() 
 
-elif species == 'Halodule Pinifolia in Year 2100':
+elif species == 'Halodule Pinifolia Temporal Distrbution (2100)':
         st.markdown("<h1 style='text-align: center; color: black;'>Predcition of the Halodule Pinfolia in Year 2100</h1>", unsafe_allow_html=True)
 
 
@@ -521,7 +521,7 @@ elif species == 'Thalassia Hemprichii Current Distribution':
         if __name__ == '__main__':
             main()
 
-elif species == 'Thalassia hemprichii in Year 2050':
+elif species == 'Thalassia Hemprichii Temporal Distrbution (2050)':
         st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
 
 
@@ -597,7 +597,7 @@ elif species == 'Thalassia hemprichii in Year 2050':
         if __name__ == '__main__':
             main() 
 
-elif species == 'Thalassia hemprichii in Year 2100':
+elif species == 'Thalassia Hemprichii Temporal Distrbution (2100)':
         st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
 
 
