@@ -35,7 +35,7 @@ if species == 'Halodule Uninervis Current Distrbution':
     #heading
     #write tile with mid align
 
-    st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
     #Pciture
@@ -49,7 +49,7 @@ if species == 'Halodule Uninervis Current Distrbution':
 
     # Define the Streamlit app
     def halodule_Uninervis_current():
-        st.title('Latitude and Longitude Prediction')
+        st.title('Sdm: Prediction')
         st.write('Enter the input variables to predict latitude and longitude:')
 
         # Input variables
@@ -95,7 +95,7 @@ elif species == 'Halodule Uninervis Temporal Distrbution (2050)':
     #heading
     #write tile with mid align
 
-    st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
     #Pciture
@@ -109,7 +109,7 @@ elif species == 'Halodule Uninervis Temporal Distrbution (2050)':
 
     # Define the Streamlit app
     def halodule_Uninervis_2050():
-        st.title('Latitude and Longitude Prediction')
+        st.title('Sdm: Prediction')
         st.write('Enter the input variables to predict latitude and longitude:')
 
         # For RCP26 in 2050
@@ -166,7 +166,7 @@ elif species == 'Halodule Uninervis Temporal Distrbution (2100)':
     #heading
     #write tile with mid align
 
-    st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
     #Pciture
@@ -180,7 +180,7 @@ elif species == 'Halodule Uninervis Temporal Distrbution (2100)':
 
     # Define the Streamlit app
     def halodule_Uninervis_2100():
-        st.title('Latitude and Longitude Prediction')
+        st.title('Sdm: Prediction')
         st.write('Enter the input variables to predict latitude and longitude:')
 
 # For RCP26 in 2100
@@ -237,7 +237,7 @@ elif species == 'Halodule Uninervis Temporal Distrbution (2100)':
 
 elif species == 'Halodule Pinifolia Current Distribution':
     # Write title with mid align
-        st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction of Halodule</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
     # Picture
         st.image('Thalassia pinfolia_new.jpg', caption='Halodule Pinifolia', use_column_width=True)
@@ -250,7 +250,7 @@ elif species == 'Halodule Pinifolia Current Distribution':
 
         # Define the Streamlit app function
         def halodule1_current():
-            st.title('Latitude and Longitude Prediction')
+            st.title('Sdm: Prediction')
             
             # Create a form to organize the input elements
             
@@ -309,7 +309,7 @@ elif species == 'Halodule Pinifolia Temporal Distrbution (2050)':
 
     
         # Load the pickled model
-        st.markdown("<h1 style='text-align: center; color: black;'>based Predcition of the Halodule Pinfolia</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
         #Pciture
@@ -322,7 +322,7 @@ elif species == 'Halodule Pinifolia Temporal Distrbution (2050)':
 
         # Define the Streamlit app
         def halodule_pinfole_2050():
-            st.title('Latitude and Longitude Prediction')
+            st.title('Sdm: Prediction')
             st.write('Enter the input variables to predict latitude and longitude:')
 
             # Input variables
@@ -377,7 +377,7 @@ elif species == 'Halodule Pinifolia Temporal Distrbution (2050)':
         halodule_pinfole_2050() 
 
 elif species == 'Halodule Pinifolia Temporal Distrbution (2100)':
-        st.markdown("<h1 style='text-align: center; color: black;'>Predcition of the Halodule Pinfolia in Year 2100</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
         #Pciture
@@ -389,7 +389,7 @@ elif species == 'Halodule Pinifolia Temporal Distrbution (2100)':
 
         # Define the Streamlit app
         def main():
-            st.title('Latitude and Longitude Prediction')
+            st.title('Sdm: Prediction')
             st.write('Enter the input variables to predict latitude and longitude:')
 
             # Input variables
@@ -461,7 +461,7 @@ elif species == 'Thalassia Hemprichii Current Distribution':
     #heading
     #write tile with mid align
 
-        st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
     #Pciture
@@ -473,7 +473,7 @@ elif species == 'Thalassia Hemprichii Current Distribution':
             model = pickle.load(file)
         # Define the Streamlit app
         def main():
-            st.title('Latitude and Longitude Prediction')
+            st.title('Sdm: Prediction')
             st.write('Enter the input variables to predict latitude and longitude:')
 
             # Input variables
@@ -522,7 +522,7 @@ elif species == 'Thalassia Hemprichii Current Distribution':
             main()
 
 elif species == 'Thalassia Hemprichii Temporal Distrbution (2050)':
-        st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
     #Pciture
@@ -534,7 +534,7 @@ elif species == 'Thalassia Hemprichii Temporal Distrbution (2050)':
 
         # Define the Streamlit app
         def main():
-            st.title('Latitude and Longitude Prediction')
+            st.title('Sdm: Prediction')
             st.write('Enter the input variables to predict latitude and longitude:')
 
             # Input variables
@@ -598,7 +598,7 @@ elif species == 'Thalassia Hemprichii Temporal Distrbution (2050)':
             main() 
 
 elif species == 'Thalassia Hemprichii Temporal Distrbution (2100)':
-        st.markdown("<h1 style='text-align: center; color: black;'>AI based Predcition of the Halodule Uninervis</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction: SDM </h1>", unsafe_allow_html=True)
 
 
     #Pciture
@@ -610,7 +610,7 @@ elif species == 'Thalassia Hemprichii Temporal Distrbution (2100)':
 
         # Define the Streamlit app
         def main():
-            st.title('Latitude and Longitude Prediction')
+            st.title('Sdm: Prediction')
             st.write('Enter the input variables to predict latitude and longitude:')
 
             # Input variables
