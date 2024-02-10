@@ -39,7 +39,7 @@ if species == 'Halodule Uninervis Current Distrbution':
 
 
     #Pciture
-    st.image('Halodule_uninervis_new.jpeg', caption='Halodule Uninervis', use_column_width=True)
+    st.image('Halodule_uninervis_new.jpg', caption='Halodule Uninervis', use_column_width=True)
 
 
     # Load the pickled model
@@ -99,7 +99,7 @@ elif species == 'Halodule Uninervis Temporal Distrbution (2050)':
 
 
     #Pciture
-    st.image('Halodule_uninervis_new.jpeg', caption='Halodule Uninervis', use_column_width=True)
+    st.image('Halodule_uninervis_new.jpg', caption='Halodule Uninervis', use_column_width=True)
 
 
     # Load the pickled model
@@ -170,7 +170,7 @@ elif species == 'Halodule Uninervis Temporal Distrbution (2100)':
 
 
     #Pciture
-    st.image('Halodule_uninervis_new.jpeg', caption='Halodule Uninervis', use_column_width=True)
+    st.image('Halodule_uninervis_new.jpg', caption='Halodule Uninervis', use_column_width=True)
 
 
     # Load the pickled model
@@ -240,7 +240,7 @@ elif species == 'Halodule Pinifolia Current Distribution':
         st.markdown("<h1 style='text-align: center; color: black;'>AI based Prediction of Halodule</h1>", unsafe_allow_html=True)
 
     # Picture
-        st.image('Thalassia pinfolia_new.jpeg', caption='Halodule Pinifolia', use_column_width=True)
+        st.image('Thalassia pinfolia_new.jpg', caption='Halodule Pinifolia', use_column_width=True)
 
     
         # Load the pickled model
@@ -313,7 +313,7 @@ elif species == 'Halodule Pinifolia Temporal Distrbution (2050)':
 
 
         #Pciture
-        st.image('Thalassia pinfolia_new.jpeg', caption='Halodule Pinifolia', use_column_width=True)
+        st.image('Thalassia pinfolia_new.jpg', caption='Halodule Pinifolia', use_column_width=True)
         #the file below is not accessable why?
 
         model_path = 'xgb_halodule_pinifolia_2050.pkl'
@@ -381,7 +381,7 @@ elif species == 'Halodule Pinifolia Temporal Distrbution (2100)':
 
 
         #Pciture
-        st.image('Thalassia pinfolia_new.jpeg', caption='Halodule Pinifolia', use_column_width=True)
+        st.image('Thalassia pinfolia_new.jpg', caption='Halodule Pinifolia', use_column_width=True)
         # Load the pickled model
         model_path = 'xgb_halodule_pinifolia_2100.pkl'
         with open(model_path, 'rb') as file:
@@ -465,7 +465,7 @@ elif species == 'Thalassia Hemprichii Current Distribution':
 
 
     #Pciture
-        st.image('Thalassia hemprichii_new.jpeg', caption='Thalassia Hemprichii', use_column_width=True)
+        st.image('Thalassia hemprichii_new.jpg', caption='Thalassia Hemprichii', use_column_width=True)
 
         # Load the pickled model
         model_path = 'voting_thalassia_current_distribution'
@@ -526,7 +526,7 @@ elif species == 'Thalassia Hemprichii Temporal Distrbution (2050)':
 
 
     #Pciture
-        st.image('Thalassia hemprichii_new.jpeg', caption='Thalassia Hemprichii', use_column_width=True)
+        st.image('Thalassia hemprichii_new.jpg', caption='Thalassia Hemprichii', use_column_width=True)
         # Load the pickled model
         model_path = 'xgb_thalassia_2050'
         with open(model_path, 'rb') as file:
@@ -602,7 +602,7 @@ elif species == 'Thalassia Hemprichii Temporal Distrbution (2100)':
 
 
     #Pciture
-        st.image('Thalassia hemprichii_new.jpeg', caption='Thalassia Hemprichii', use_column_width=True)
+        st.image('Thalassia hemprichii_new.jpg', caption='Thalassia Hemprichii', use_column_width=True)
         # Load the pickled model
         model_path = 'xgb_thalassia_2100'
         with open(model_path, 'rb') as file:
