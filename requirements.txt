@@ -7,3 +7,4 @@ seaborn==0.12.2
 streamlit==1.16.0
 streamlit_folium==0.13.0
 xgboost==1.7.2
+altair>=4.0.0
