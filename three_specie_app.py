@@ -4,6 +4,7 @@
 
 # import libraries
 import streamlit as st
+import altair.vegalite.v4
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
